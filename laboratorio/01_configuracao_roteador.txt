@@ -1,0 +1,12 @@
+enable
+configure terminal
+hostname R1-REDES
+interface gigabitEthernet 0/0
+description LAN-LAB-SNMP
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+snmp-server community REDES2026 RO
+end
+copy running-config startup-config
+
